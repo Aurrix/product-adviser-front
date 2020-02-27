@@ -1,0 +1,11 @@
+<span *ngIf='isServiceAvalible'>
+<h2 class="text-center">Here are all our products:</h2>
+<mat-list *ngFor='let product of products'>
+  <mat-list-item class="text-center">{{product.name}}</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+</span>
+<span *ngIf='!isServiceAvalible' class="text-center">
+  <br><br>
+  <h2>Looks like service is unavailable :(</h2> 
+</span>

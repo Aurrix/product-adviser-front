@@ -1,0 +1,38 @@
+<div *ngIf='!showResults'>
+    <h2 class="text-center">What can you tell us?</h2>
+    <form [formGroup]='form'>
+        <mat-form-field class="field-full-width">
+            <mat-label>Whats your age?</mat-label>
+            <input formControlName='age' type="number" matInput placeholder="Min 17 & Max 120" required>
+            <mat-error *ngIf="age.touched && age.invalid">Age is required, between 16 and 120 is allowed.</mat-error>
+        </mat-form-field>
+        <mat-slide-toggle formControlName='student'>I am a student !</mat-slide-toggle>
+        <mat-form-field class="field-full-width">
+            <mat-label>How much you earn?</mat-label>
+            <input formControlName='income' type="number" matInput
+                placeholder="Product offers range from 0 to 40000 EUR" required>
+            <mat-error *ngIf="income.touched && income.invalid">Income is required, should not be negative.</mat-error>
+        </mat-form-field>
+        <button mat-raised-button type="button" color='accent' class="full-width" (click)='submit()'>I am
+            ready...</button>
+    </form>
+</div>
+<div *ngIf='showResults'>
+    <span class="centrilized" *ngIf='isRequesting'>
+        <mat-spinner></mat-spinner>
+    </span>
+    <span *ngIf='!isRequesting && isServiceAvalible'>
+        <h2 class="text-center">These are what you can get:</h2>
+        <mat-list *ngFor='let result of results'>
+            <mat-list-item class="text-center">{{result.name}}</mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+        <br><br>
+        <button mat-raised-button color='accent' type="button" class="full-width" (click)='reset()'>New
+            request!</button>
+    </span>
+    <span *ngIf='!isServiceAvalible' class="text-center">
+        <br><br>
+        <h2>Looks like service is unavailable :(</h2> 
+    </span>
+</div>
