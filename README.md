@@ -8,9 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Node.js (installed with NPM)
-NPM CLI
-ANGULAR CLI
+-Node.js (installed with NPM)
+
+-NPM CLI
+
+-ANGULAR CLI
 
 ### Backend
 
