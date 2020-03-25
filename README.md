@@ -1,27 +1,36 @@
 # ProductAdviserFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+Includes a form and list of all products.
 
-## Development server
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+-Node.js (installed with NPM)
+
+-NPM CLI
+
+-ANGULAR CLI
+
+### Backend
+
+This project requires running instance of [product-adviser](https://github.com/Aurrix/product-adviser) service running on port **8081**.
+
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project is licensed under the [Apache License 2](https://www.apache.org/licenses/LICENSE-2.0)
+
