@@ -22,6 +22,14 @@ This project requires running instance of [product-adviser](https://github.com/A
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+### Running with Docker
+
+This will option will run provide you production grade ready server (nginx) and angular app with it. Public image aurrix/seb:product-adviser-front. You would need make port forwarding and provide argument API_URL that referes to address of backend server that needs to be set-up before.
+
+```
+docker run -p 80:80 aurrix/seb:product-adviser-front API_URL='the address'
+```
+
 ### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
